@@ -1,0 +1,19 @@
+static:
+- favicon.ico
+- _bootstrap.php
+- _library.php
+- _database.php
+app:
+- config.php
+- index.php
+- application.php
+- create_schema.php
+schema:
+  crud.php: $.php
+  schema_form.php: $_form.php
+  schema_insert.php: $_insert.php
+  schema_list.php: $_list.php
+  schema_select.php: $_select.php
+  schema_delete.php: $_delete.php
+  schema_record.php: $_record.php
+  schema_update.php: $_update.php

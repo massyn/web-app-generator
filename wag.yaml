@@ -1,0 +1,38 @@
+---
+app:
+  title: Default Web App
+
+schema:
+  table: $$
+  tag: $$
+  parent: Parent
+  can_delete:
+  - true
+  - false
+  can_edit:
+  - true
+  - false
+  can_add:
+  - true
+  - false
+  # blueprint: 
+  # - crud
+  # - profile
+
+schema.fields:
+  desc: $
+  default: ''
+  tag: $$
+  type:
+  - text
+  - textarea
+  - dropdown
+  - lookup
+  required:
+  - false
+  - true
+  helptext: ''
+  options: { }
+  on_list:
+  - true
+  - false
