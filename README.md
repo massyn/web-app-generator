@@ -1,6 +1,8 @@
 # web-app-generator
 Generate CRUD-style web-based applications
 
+![Build](https://github.com/massyn/web-app-generator/actions/workflows/blank.yml/badge.svg)
+
 ## Features
 
 * Generate PHP code for a simple CRUD-like application

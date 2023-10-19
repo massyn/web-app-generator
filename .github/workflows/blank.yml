@@ -1,4 +1,4 @@
-name: CI
+name: Testing
 on:
   push:
     branches: [ "main" ]
@@ -28,4 +28,33 @@ jobs:
       - name: Create a schema
         run: |
           python wag.py -yaml myapp.yaml -schema "The Phonebook" -fields name notes "Phone Number" "Email Address" dob "Contact Type"
-          
+      - name: Change a field type
+        run: |
+          python wag.py -yaml myapp.yaml -schema "The Phonebook" -f notes type textarea
+      - name: Change field on_list
+        run: |
+          python wag.py -yaml myapp.yaml -schema "The Phonebook" -f notes on_list false
+      - name: Change field required
+        run: |
+          python wag.py -yaml myapp.yaml -schema "The Phonebook" -f name required True
+      - name: Change field helptext
+        run: |
+          python wag.py -yaml myapp.yaml -schema "The Phonebook" -f dob helptext "Use the format as YYYY-MM-DD"
+      - name: Change field type dropdown
+        run: |
+          python wag.py -yaml myapp.yaml -schema "The Phonebook" -f "Contact Type" type dropdown
+      - name: Change field options
+        run: |
+          python wag.py -yaml myapp.yaml -schema "The Phonebook" -f "Contact Type" options Supplier Customer
+      - name: Create new schema
+        run: |
+          python wag.py -yaml myapp.yaml -schema "Engagements" -fields Contact Company Enquiry Date
+      - name: Change field type engageme
+        run: |
+          python wag.py -yaml myapp.yaml -schema "Engagements" -f Contact type lookup
+      - name: Change field options
+        run: |
+          python wag.py -yaml myapp.yaml -schema "Engagements" -f Contact options the_phonebook name contact_type
+      - name: Generate the output
+        run: |
+          python wag.py -yaml myapp.yaml -template php -output /tmp
