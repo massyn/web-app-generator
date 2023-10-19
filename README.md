@@ -115,20 +115,20 @@ This approach does bring with it some downsides.  The inability to simply execut
 
 ## Future Plans
 
-[ ] - Support for OATH2 (AWS Cognito) and SAML
-[ ] - More data types
-[ ] - Relational tables
-[ ] - Generate Python Flask applications (new template)
-[ ] - WAF-like capability
-[ ] - Brute force detection
-[ ] - Application logging
-[ ] - Table audit trails
-[ ] - A better way to `scanTable` that does not require the entire table to be read
-[ ] - "Search" a table
-[ ] - Support Postgres database
-[ ] - Some basic reporting capabilities
-[ ] - Blueprints (a way to create basic use cases as templates)
-[ ] - Table (list) pagination
+* Support for OATH2 (AWS Cognito) and SAML
+* More data types
+* Relational tables
+* Generate Python Flask applications (new template)
+* WAF-like capability
+* Brute force detection
+* Application logging
+* Table audit trails
+* A better way to `scanTable` that does not require the entire table to be read
+* "Search" a table
+* Support Postgres database
+* Some basic reporting capabilities
+* Blueprints (a way to create basic use cases as templates)
+* Table (list) pagination
 
 ## Other ideas (not on the current roadmap)
 
